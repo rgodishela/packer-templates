@@ -1,0 +1,16 @@
+{
+  "builders": [{
+  "type": "amazon-ebs",
+  "region": "us-east-1",
+  "instance_type": "t2.micro",
+  "ami_name": "Windows Test AMI {{timestamp}}",
+  "user_data_file": "SetUpWinRM.ps1",
+  "communicator": "winrm",
+  "winrm_username": "Administrator",
+  "winrm_use_ssl": true,
+  "winrm_insecure": true,
+  "source_ami": "ami-f0df538f"
+  }
+]
+
+}
