@@ -14,7 +14,7 @@ Remove-Item -Path WSMan:\Localhost\listener\listener* -Recurse
 $Cert = New-SelfSignedCertificate -CertstoreLocation Cert:\LocalMachine\My -DnsName "packer"
 New-Item -Path WSMan:\LocalHost\Listener -Transport HTTPS -Address * -CertificateThumbPrint $Cert.Thumbprint -Force
 
-# WinRM
+# WinRM Commands
 write-output "Setting up WinRM"
 write-host "(host) setting up WinRM"
 
